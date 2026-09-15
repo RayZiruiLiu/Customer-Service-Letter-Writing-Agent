@@ -32,6 +32,7 @@ import {
   History,
   ArrowRightLeft,
   X,
+  AlertCircle,
 } from "lucide-react";
 
 interface Step4LetterPreviewProps {
@@ -436,6 +437,17 @@ export const Step4LetterPreview: React.FC<Step4LetterPreviewProps> = ({
             }
           }}
         />
+      )}
+
+      {/* Warning/Notice Banner if applicable */}
+      {letterData.warning && (
+        <div className="bg-amber-50 border border-amber-300 text-amber-900 rounded-xl p-3.5 text-xs flex items-start gap-2.5">
+          <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+          <div className="space-y-1">
+            <div className="font-semibold text-amber-950">Configuration Notice</div>
+            <div className="text-amber-800 leading-relaxed">{letterData.warning}</div>
+          </div>
+        </div>
       )}
 
       {/* Status & Distinction Banner Directly Above Document */}
