@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.2s ease-out forwards;
+  }
+}
+
+@media print {
+  header,
+  nav,
+  footer,
+  button,
+  .lg\:col-span-4,
+  #step-progress-nav,
+  #app-header {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  #letter-document-paper {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .lg\:col-span-8 {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Customer Service Letter-Writing Agent",
+  "description": "An intelligent assistant that drafts clear, effective customer service letters and messages for returns, refunds, claims, and complaints with tailored tone and firmness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
